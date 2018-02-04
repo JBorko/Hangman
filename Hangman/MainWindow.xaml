@@ -5,8 +5,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Hangman"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="Hangman" 
+        SizeToContent="WidthAndHeight">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Label FontSize="20" Grid.Column="0" Grid.Row="0" Content="Guess hiden word!" FontWeight="Bold" Foreground="Red"></Label>
+        <StackPanel Height="30" VerticalAlignment="Center" Grid.Column="0" Grid.Row="1" Orientation="Horizontal">
+            <Label Margin="0,0,10,0">Enter character:</Label>
+            <TextBox Width="50" Name="txtInputLetter" MaxLength="1" Margin="0,0,10,0"/>
+            <Button Name="btnSubmit" Width="100" Click="btnSubmit_Click">Confirm</Button>
+        </StackPanel>
+        <Grid Grid.Row="2" VerticalAlignment="Top" HorizontalAlignment="Left">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Orientation="Horizontal" Name="charsPanel" Grid.Column="0" Grid.Row="0">
+                
+            </StackPanel>
+        </Grid>
     </Grid>
 </Window>
